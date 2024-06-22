@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Art Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet"> <!-- Hack Club Font -->
+</head>
+<body>
+    <header>
+        <h1>CSS Art Generator</h1>
+        <p>Create unique art pieces!</p>
+    </header>
+    <div id="loading-container">
+        <img src="load.png" alt="Loading...">
+        <div id="loading-bar">
+            <div id="loading-progress"></div>
+        </div>
+    </div>
+    <div id="art-container"></div>
+    <button onclick="generateArt()">Generate Art</button>
+    <script src="script.js"></script>
+</body>
+</html>

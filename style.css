@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #0a0a0a;
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+    color: white;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #e42d42; /* Hack Club red */
+}
+
+p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+#loading-container {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    animation: fadeInOut 2s infinite, moveUpDown 1s infinite alternate;
+    opacity: 0;
+    text-align: center;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translate(-50%, -55%);
+    }
+    100% {
+        transform: translate(-50%, -45%);
+    }
+}
+
+#loading-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    margin-top: 10px;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#loading-progress {
+    width: 0;
+    height: 100%;
+    background-color: #e42d42;
+    animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+#art-container {
+    width: 80%;
+    height: 70vh;
+    border: 1px solid #e42d42;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.art-block {
+    position: absolute;
+    background-color: #000;
+    transition: all 0.3s;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #e42d42; /* Hack Club red */
+    color: white;
+    border-radius: 5px;
+    font-family: 'Space Mono', monospace;
+}
+
+button:hover {
+    background-color: #b02130; /* Darker Hack Club red */
+}
